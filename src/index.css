@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.header{
+  height: 60px;
+  background-color: dodgerblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.header h2{
+  margin: 0px;
+  padding: 0px;
+}
+
+.catshowmain{
+  width:-webkit-fill-available;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 10px;
+  border-left: 2px solid grey;
+}
+
+.singleitem{
+  flex: 33%;
+  max-width: 300px;
+  box-shadow: 4px 4px 4px lightgray,-4px -4px 4px lightgray;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 6px 6px;
+}
+
+.singleitem img{
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+}
+
+.singleitem h2{
+  color: dodgerblue;
+}
+
+.singleitem button{
+  border: 1px solid tomato;
+  background-color: rgb(255, 235, 232);
+  color: tomato;
+  outline:none;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  padding: 4px 16px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.singleitem button:hover{
+  border: 1px solid tomato;
+  background-color: tomato;
+  color: #fff;
+  outline:none;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  padding: 4px 16px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.catmain{
+  min-width: max-content;
+  width: 200px !important;
+  height: 100%;
+  padding: 20px 30px 20px 20px;
+}
+
+@media screen and (max-width:550px) {
+  .wrapper{
+    flex-direction: column;
+  }
+  .catmain{
+    width: 100%;
+    height: fit-content !important;
+    box-shadow: none;
+  }
+  .catshowmain{
+    border-top: 2px solid lightcoral;
+    padding-top: 40px;
+    border-left: none;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .catshowmain{
+    flex-direction: column;
+    align-items: center;
+  }
+}
